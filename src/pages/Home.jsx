@@ -12,7 +12,7 @@ function Home() {
         income = 0;
     transactions.forEach((element) => {
         const amount = parseInt(element.amount);
-        amount < 0 ? (expense += -amount) : (income += amount);
+        amount < 0 ? (expense += amount) : (income += amount);
     });
     return (
         <div className="mx-auto my-24 flex flex-col max-w-md gap-8 p-4 px-8 sm:p-0">
@@ -42,7 +42,7 @@ function Home() {
                     </h3>
                     {empty && <p className="text-4xl">$0</p>}
                     {!empty && transactions.length !== 0 && (
-                        <p className="text-4xl">${expense}</p>
+                        <p className="text-4xl">${Math.abs(expense)}</p>
                     )}
                     {!empty && transactions.length === 0 && <p>Loading...</p>}
                 </div>
