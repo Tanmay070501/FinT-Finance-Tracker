@@ -17,9 +17,14 @@ function NewTransaction() {
             amount: amountRef.current.value,
         });
         setIsPending(false);
-        nameRef.current.value = "";
-        amountRef.current.value = "";
+        if (nameRef?.current?.value) {
+            nameRef.current.value = "";
+        }
+        if (amountRef?.current?.value) {
+            amountRef.current.value = "";
+        }
     };
+
     return (
         <div className="mx-auto my-24 flex flex-col max-w-md gap-8 p-4 px-8 sm:p-0">
             <h2 className="text-xl">Add new Transactions</h2>
