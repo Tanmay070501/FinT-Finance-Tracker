@@ -73,6 +73,7 @@ function Navbar() {
                 }`}
             >
                 <NavLink
+                    onClick={() => setShow(false)}
                     className={({ isActive }) =>
                         isActive
                             ? " border border-purple-500 text-purple-800 hover:text-purple-400 hover:border-purple-400 p-2"
@@ -83,6 +84,7 @@ function Navbar() {
                     Home
                 </NavLink>
                 <NavLink
+                    onClick={() => setShow(false)}
                     className={({ isActive }) =>
                         isActive
                             ? "border border-purple-500 text-purple-800 hover:text-purple-400 hover:border-purple-400 p-2"
@@ -93,6 +95,7 @@ function Navbar() {
                     Transactions
                 </NavLink>
                 <NavLink
+                    onClick={() => setShow(false)}
                     className={({ isActive }) =>
                         isActive
                             ? "border border-purple-500 text-purple-800 hover:text-purple-400 hover:border-purple-400 p-2"
